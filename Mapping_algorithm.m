@@ -62,7 +62,7 @@ Reflist(5).data=Temp;
 clear Temp
 
 
-% Overlay the over the Floor Plan
+% Overlay them over the Floor Plan
 fg1=figure(1);
 title('Floor Map');
 for i=1:nRefNodes
@@ -101,7 +101,7 @@ end
 % Later you can average the chosen packets ( IFF Necessary)
 
 
-% Load Blond Node Data 
+% Load Blind Node Data 
 
 filenum=num2str(testnum);
 header='BlindatPosB';

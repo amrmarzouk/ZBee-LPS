@@ -1,6 +1,6 @@
 
 
-% for testnum=1:7
+for testnum=1:7
 
 clc
 % clear all
@@ -25,7 +25,7 @@ nRefNodes=5;
 
 Reflist(1).HexAdd='6890';
 Reflist(1).pos=[424 233]; % Pixels on the Floor Plan
-Reflist(1).DecAdd=hex2dec('6980');
+Reflist(1).DecAdd=hex2dec('6890');
 Temp=load('Ref6890.txt');
 Reflist(1).data=Temp;
 clear Temp
@@ -62,7 +62,7 @@ Reflist(5).data=Temp;
 clear Temp
 
 
-% Overlay the over the Floor Plan
+% Overlay them over the Floor Plan
 fg1=figure(1);
 title('Floor Map');
 for i=1:nRefNodes
@@ -102,31 +102,31 @@ end
 
 
 % Load Blond Node Data 
-% 
-% filenum=num2str(testnum);
-% header='BlindatPosB';
-% tailer='.txt';
-% filename=strcat(header,filenum,tailer);
-% Blind=load(filename);
+
+filenum=num2str(testnum);
+header='BlindatPosB';
+tailer='.txt';
+filename=strcat(header,filenum,tailer);
+Blind=load(filename);
  
 % Tests at exactly the reference nodes
-testnum=5;
-Blind=load('Ref143f_IFO_t325.txt');
-test_loc=[389 233;
-          177 167;
-          106 67;
-          389 432;
-          495 598];
+% testnum=5;
+% Blind=load('Ref143f_IFO_t325.txt');
+% test_loc=[389 233;
+%           177 167;
+%           106 67;
+%           389 432;
+%           495 598];
+% 
 
 
-
-% test_loc=[424 67;
-%           283 266;
-%           283 167;
-%           142 100;
-%           36  200;
-%           354 399;
-%           460 565];
+test_loc=[424 67;
+          283 266;
+          283 167;
+          142 100;
+          36  200;
+          354 399;
+          460 565];
 
 % for i=1:length(test_loc)
 i=testnum;
@@ -254,9 +254,9 @@ title('Location Probability Distribution')
 % 
 % saveas(fg1,FPpngfilename, 'png');
 % saveas(fg2,Probpngfilename, 'png');
+ pause(6)
+end
  
-% end
- 
-%%
-saveas(fg1,'TestFloorPlan5p5.png', 'png');
-saveas(fg2,'TestProb5p5.png', 'png');
+% %%
+% saveas(fg1,'TestFloorPlan5p5.png', 'png');
+% saveas(fg2,'TestProb5p5.png', 'png');
