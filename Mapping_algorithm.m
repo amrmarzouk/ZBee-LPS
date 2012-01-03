@@ -254,7 +254,7 @@ title('Location Probability Distribution')
 % 
 % saveas(fg1,FPpngfilename, 'png');
 % saveas(fg2,Probpngfilename, 'png');
- pause(5)
+ pause(4)
 end
  
 % %%
